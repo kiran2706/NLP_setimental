@@ -24,7 +24,7 @@ def run():
     k = st.text_input('')
     lis = ['first']
     lis[0] = k
-    df = pd.DataFrame(ki, columns=['review'])
+    df = pd.DataFrame(k, columns=['review'])
     sid = SentimentIntensityAnalyzer()
     df["review"] = df["Review"].apply(lambda x: sid.polarity_scores(x))
     df = pd.concat([df.drop(['sentiments'], axis=1), df['sentiments'].apply(pd.Series)], axis=1)
