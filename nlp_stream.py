@@ -1,5 +1,6 @@
 from pycaret.classification import load_model, predict_model
 import streamlit as st
+import pandas as pd
 import string
 import nltk
 from nltk import pos_tag
